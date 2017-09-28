@@ -27,3 +27,5 @@ hs_err_pid*
 /.idea/
 /springboot-helloworld/mvnw
 /springboot-helloworld/mvnw.cmd
+/springboot-mybatis-redis/.gitignore
+/springboot-jsp/.gitignore
