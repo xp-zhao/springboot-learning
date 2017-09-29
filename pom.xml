@@ -13,6 +13,7 @@
         <module>springboot-mybatis</module>
         <module>springboot-jsp</module>
         <module>springboot-mybatis-redis</module>
+        <module>springboot-thymeleaf</module>
     </modules>
 
     <parent>
