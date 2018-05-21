@@ -18,7 +18,7 @@ public class UserRestController
 	private UserService userService;
 
 	@RequestMapping(value = "/api/user",method = RequestMethod.GET)
-	public User findOneUser(@RequestParam(value = "userName",required = true) String userName)
+	public User findOneUser(@RequestParam(value = "userName",required = true,defaultValue = "xp") String userName)
 	{
 		return userService.findByName(userName);
 	}

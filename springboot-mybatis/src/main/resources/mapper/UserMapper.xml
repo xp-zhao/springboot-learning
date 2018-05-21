@@ -13,4 +13,12 @@
 		where user_name = #{userName}
 	</select>
 
+	<insert id="addData">
+		INSERT IGNORE INTO  test (data)
+		VALUES
+		<foreach collection="list" item="item" index="index" open="" close="" separator=",">
+			(#{item.playlistId})
+		</foreach>
+	</insert>
+
 </mapper>
