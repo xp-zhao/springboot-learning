@@ -15,6 +15,7 @@
         <module>springboot-mybatis-redis</module>
         <module>springboot-thymeleaf</module>
         <module>springboot-rabbitmq</module>
+        <module>springboot-mulenv</module>
     </modules>
 
     <parent>
