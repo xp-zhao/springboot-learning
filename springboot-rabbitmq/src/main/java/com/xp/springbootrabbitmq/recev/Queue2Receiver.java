@@ -1,26 +1,20 @@
 package com.xp.springbootrabbitmq.recev;
 
 import com.rabbitmq.client.Channel;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.amqp.core.Message;
-import org.springframework.amqp.rabbit.annotation.RabbitHandler;
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by xp-zhao on 2018/5/22.
+ * Created by xp-zhao on 2018/7/20.
  */
 @Component
-public class Receiver extends BaseConsumer
+public class Queue2Receiver extends BaseConsumer
 {
-	private static final Logger logger = LogManager.getLogger("recvLog");
-
-	public Receiver()
+	public Queue2Receiver()
 	{
-		super("queue1");
+		super("queue2");
 	}
 
 	@Override
