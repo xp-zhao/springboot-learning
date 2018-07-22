@@ -21,7 +21,8 @@ public class Sender
 	public void send()
 	{
 		String context = "hello " +new Date();
-		this.template.convertAndSend("local.test","test",context);
+		template.convertAndSend("local.test","test",context);
 		logger.info("send: "+context);
+		System.out.println("send: "+context);
 	}
 }
