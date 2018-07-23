@@ -11,23 +11,23 @@ import java.util.Map;
  */
 public class RabbitFactory
 {
-	private static final Logger                    logger     = LogManager.getLogger("myLog");
+	private static final Logger                    logger    = LogManager.getLogger("myLog");
 	private static       Map<String, BaseConsumer> queueCache = new HashMap<>();
 
 	public static void registQueue(String queueName,BaseConsumer baseConsumer)
 	{
 		if( null != queueCache.get(queueName))
 		{
-			System.out.println("队列已存在，请更换！");
-			logger.error("队列已存在，请更换！");
+			System.out.println("此队列对应监听已存在，请更换！");
+			logger.error("此队列对应监听已存在，请更换！");
 			System.exit(0);
 		}
-		queueCache.put(queueName , baseConsumer);
+		queueCache.put(queueName, baseConsumer);
 	}
 
-	public static BaseConsumer queryHandleService(String queueName)
+	public static BaseConsumer queryConsumer(String queueName)
 	{
-		BaseConsumer service = queueCache.get(queueName);
-		return service;
+		BaseConsumer baseConsumer = queueCache.get(queueName);
+		return baseConsumer;
 	}
 }

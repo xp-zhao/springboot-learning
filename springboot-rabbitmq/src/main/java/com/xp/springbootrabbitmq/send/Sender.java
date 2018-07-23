@@ -21,7 +21,13 @@ public class Sender
 	public void send()
 	{
 		String context = "hello " +new Date();
-		template.convertAndSend("local.test","test",context);
+		template.convertAndSend("exchange.test1","test1",context);
+		template.convertAndSend("exchange.test1","test1",context);
+		template.convertAndSend("exchange.test1","test1",context);
+		template.convertAndSend("exchange.test2","test2",context);
+		template.convertAndSend("exchange.test2","test2",context);
+		template.convertAndSend("exchange.test2","test2",context);
+		template.convertAndSend("exchange.test2","test2",context);
 		logger.info("send: "+context);
 		System.out.println("send: "+context);
 	}
