@@ -20,10 +20,10 @@ public class HandleService implements ChannelAwareMessageListener
 	@Override
 	public void onMessage(Message message , Channel channel) throws Exception
 	{
-		String str = new String(message.getBody(),"UTF-8");
-		String queueName = message.getMessageProperties().getConsumerQueue();
-		baseConsumer = RabbitFactory.queryHandleService(queueName);
-		System.out.println(queueName+"接收消息："+str);
-		baseConsumer.consumerHandle(message,channel);
+//		String str = new String(message.getBody(),"UTF-8");
+//		String queueName = message.getMessageProperties().getConsumerQueue();
+//		baseConsumer = RabbitFactory.queryHandleService(queueName);
+//		System.out.println(queueName+"接收消息："+str);
+//		baseConsumer.consumerHandle(message,channel);
 	}
 }

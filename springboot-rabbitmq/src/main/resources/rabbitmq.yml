@@ -1,0 +1,16 @@
+rabbitmq:
+    exchange:
+        - exchangeName: exchange.test1
+          queues:
+              - queueName: queue_test1
+                executeHost:
+                concurrentConsumers: 3 # 并发消费者数量
+                routingKeys:
+                    - test1
+        - exchangeName: exchange.test2
+          queues:
+              - queueName: queue_test2
+                executeHost:
+                concurrentConsumers: 1 # 并发消费者数量
+                routingKeys:
+                    - test2
